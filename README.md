@@ -31,20 +31,22 @@ obtenido del portal de transparencia institucional LOTAIP 2023.
 
 ## 📚 Contenido de la Unidad 2
 
-### APE 06 — Ajuste de Modelo Discreto a Fenómeno Natural
-📂 [`APE06_Distribuciones`](https://github.com/js-valencia/Unidad_2_Aprendizajes_Practicos_Experimentales/blob/main/Portafolio_APE_Unidad2/APE_006_Distribuciones.ipynb)
+### APE 06 — Distribuciones Discretas Notables
+📂 [`APE_006_Distribuciones`](Portafolio_APE_Unidad2/APE_006_Distribuciones.ipynb)
 
-Se investigó si el fenómeno de **percepción de horas suplementarias**
-por parte de los empleados municipales se ajusta a una distribución
-**Binomial B(2883, 0.2109)**. Se estimaron los parámetros empíricos
-directamente desde el dataset, se construyó la PMF teórica con
-`scipy.stats` y se superpuso sobre el histograma empírico para
-analizar visualmente el ajuste. Se verificaron las 4 condiciones del
-modelo y los criterios de aproximación a la Normal (n·p = 608 ≥ 5,
-n·q = 2275 ≥ 5). El valor observado k = 608 coincidió exactamente
-con la media teórica del modelo.
+Se modelaron computacionalmente las distribuciones discretas más
+importantes. En la **Tarea 1** se simuló un escenario de control de
+calidad de software con distribución **Binomial B(n=20, p=0.15)**,
+graficando PMF y CDF para predecir fallos en microservicios. En la
+**Tarea 2** se modeló la llegada de peticiones erróneas a servidores
+universitarios con **Poisson (λ=4.5)**, calculando P(X=6) = 0.1281.
+En la **Tarea 3 (ABP)** se aplicó Poisson sobre la variable
+*Horas Suplementarias* del dataset regional (λ=30.13), comparando
+visualmente el histograma empírico con la PMF teórica. En la
+**Tarea 4 (ABI)** se demostró la aproximación Binomial→Poisson
+con n=1000, p=0.01, λ=10, obteniendo diferencias menores a 6.3×10⁻⁴.
 
-**Librerías:** `pandas`, `numpy`, `scipy.stats`, `matplotlib`
+**Librerías:** `numpy`, `scipy.stats`, `matplotlib`, `seaborn`, `pandas`
 
 ---
 
@@ -114,20 +116,21 @@ con n=100,000 cualquier diferencia mínima se vuelve detectable.
 
 ---
 
-### APE 11 — A/B Testing y Aproximación Asintótica
-📂 [`APE_011_DosMuestras`](https://github.com/js-valencia/Unidad_2_Aprendizajes_Practicos_Experimentales/blob/main/Portafolio_APE_Unidad2/APE_011_DosMuestras.ipynb)
+### APE 11 — Pruebas de Hipótesis para Dos Muestras
+📂 [`APE_011_DosMuestras`](Portafolio_APE_Unidad2/APE_011_DosMuestras.ipynb)
 
-Se implementó la **aproximación de la Binomial a la Normal** para
-escenarios de Big Data (N=10,000), documentando el
-`OverflowError: int too large to convert to float` al intentar
-calcular C(10000, 4200) con factoriales nativos. Se validó la
-aproximación asintótica con corrección de continuidad de Yates,
-obteniendo P(2050 ≤ X ≤ 2150) ≈ 0.7734 vs exacta 0.7737
-(diferencia de 0.0003). Se demostró la ventaja computacional
-de `norm.cdf()` O(1) frente al cálculo iterativo de PMF
-discreta O(N) en entornos de Big Data.
+Se implementaron pruebas de hipótesis para comparación entre grupos.
+En la **Tarea 1 (A/B Testing)** se comparó el consumo de RAM entre
+dos algoritmos independientes (Algo A: μ=118.91 MB vs Algo B:
+μ=126.71 MB), obteniendo t=-2.5362 y p=0.0133, rechazando H₀ y
+confirmando diferencia significativa. En la **Tarea 2 (Muestras
+Pareadas)** se evaluó el impacto de un nuevo firewall sobre la
+latencia de los mismos servidores antes y después, obteniendo
+t=12.3359 y p=3.28×10⁻⁹, evidenciando una reducción significativa
+de 3.33 ms en promedio. El análisis ANOVA de 1 factor y pruebas
+Post-Hoc Tukey serán abordados en la Unidad 3.
 
-**Librerías:** `scipy.stats`, `numpy`, `matplotlib`, `math`
+**Librerías:** `numpy`, `scipy.stats`, `matplotlib`, `seaborn`
 
 ---
 
