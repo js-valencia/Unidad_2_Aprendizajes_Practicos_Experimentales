@@ -25,14 +25,14 @@ obtenido del portal de transparencia institucional LOTAIP 2023.
 | Variable principal de análisis | Remuneración Mensual Unificada |
 | Regímenes laborales | LOSEP, Código de Trabajo, LOSEP-SOC, LOSEP-CONCEJAL |
 
-📂 Archivo: [`dataset/3._remuneraciones_ingresos_adicionales.xlsx`](dataset/3._remuneraciones_ingresos_adicionales.xlsx)
+📂 Archivo: [`dataset/3._remuneraciones_ingresos_adicionales.xlsx`](https://github.com/js-valencia/Unidad_2_Aprendizajes_Practicos_Experimentales/blob/main/Dataset_Regional/3._remuneraciones_ingresos_adicionales.xlsx)
 
 ---
 
 ## 📚 Contenido de la Unidad 2
 
 ### APE 06 — Ajuste de Modelo Discreto a Fenómeno Natural
-📂 [`APE06_Distribuciones_Discretas/`](APE06_Distribuciones_Discretas/)
+📂 [`APE06_Distribuciones`](https://github.com/js-valencia/Unidad_2_Aprendizajes_Practicos_Experimentales/blob/main/Portafolio_APE_Unidad2/APE_006_Distribuciones.ipynb)
 
 Se investigó si el fenómeno de **percepción de horas suplementarias**
 por parte de los empleados municipales se ajusta a una distribución
@@ -48,8 +48,24 @@ con la media teórica del modelo.
 
 ---
 
-### APE 07 — Distribuciones Muestrales y Teorema del Límite Central
-📂 [`APE07_TLC_Simulacion/`](APE07_TLC_Simulacion/)
+### APE 07 — Identificación de Normalidad
+📂 [`APE_007_Normal`](https://github.com/js-valencia/Unidad_2_Aprendizajes_Practicos_Experimentales/blob/main/Portafolio_APE_Unidad2/APE_007_Normal.ipynb)
+
+Se sometió la variable **Remuneración Unificada Anual** a un análisis
+riguroso de normalidad mediante métodos visuales y analíticos. Se
+generó un histograma + KDE comparado con la curva Normal teórica,
+y un gráfico Q-Q con `scipy.stats.probplot`. Se calcularon los
+coeficientes de **Asimetría (skewness = 1.85)** y
+**Curtosis (kurtosis = 9.08)**, concluyendo que la variable
+**no sigue una distribución Normal**, con cola derecha pronunciada
+generada por salarios altos de autoridades y directivos.
+
+**Librerías:** `pandas`, `scipy.stats`, `seaborn`, `matplotlib`
+
+---
+
+### APE 08 — Distribuciones Muestrales y Teorema del Límite Central
+📂 [`APE_008_TLC`](https://github.com/js-valencia/Unidad_2_Aprendizajes_Practicos_Experimentales/blob/main/Portafolio_APE_Unidad2/APE_008_TLC.ipynb)
 
 Se demostró computacionalmente el **Teorema del Límite Central (TLC)**
 mediante simulación estocástica de Monte Carlo sobre una población
@@ -65,24 +81,8 @@ mitad requiere cuadruplicar la muestra.
 
 ---
 
-### APE 08 — Identificación de Normalidad
-📂 [`APE08_Normalidad/`](APE08_Normalidad/)
-
-Se sometió la variable **Remuneración Unificada Anual** a un análisis
-riguroso de normalidad mediante métodos visuales y analíticos. Se
-generó un histograma + KDE comparado con la curva Normal teórica,
-y un gráfico Q-Q con `scipy.stats.probplot`. Se calcularon los
-coeficientes de **Asimetría (skewness = 1.85)** y
-**Curtosis (kurtosis = 9.08)**, concluyendo que la variable
-**no sigue una distribución Normal**, con cola derecha pronunciada
-generada por salarios altos de autoridades y directivos.
-
-**Librerías:** `pandas`, `scipy.stats`, `seaborn`, `matplotlib`
-
----
-
 ### APE 09 — Intervalos de Confianza (Z y T de Student)
-📂 [`APE09_Intervalos_Confianza/`](APE09_Intervalos_Confianza/)
+📂 [`APE_009_Intervalos`](https://github.com/js-valencia/Unidad_2_Aprendizajes_Practicos_Experimentales/blob/main/Portafolio_APE_Unidad2/APE_009_Intervalos.ipynb)
 
 Se implementaron intervalos de confianza al 95% usando distribución
 **Z** (n=100, consumo energético simulado) y **T de Student** (n=12,
@@ -98,7 +98,7 @@ exigir 99% de certeza casi duplica el margen de error respecto al
 ---
 
 ### APE 10 — Pruebas de Hipótesis Paramétricas
-📂 [`APE10_Pruebas_Hipotesis/`](APE10_Pruebas_Hipotesis/)
+📂 [`APE_010_Pruebas_Hipotesis`](https://github.com/js-valencia/Unidad_2_Aprendizajes_Practicos_Experimentales/blob/main/Portafolio_APE_Unidad2/APE10_Pruebas_Hipotesis.ipynb)
 
 Se implementaron pruebas de hipótesis Z y T de Student uni y
 bimuestrales. Se validó que el consumo de sensores (t=3.54,
@@ -115,7 +115,7 @@ con n=100,000 cualquier diferencia mínima se vuelve detectable.
 ---
 
 ### APE 11 — A/B Testing y Aproximación Asintótica
-📂 [`APE11_AB_Testing/`](APE11_AB_Testing/)
+📂 [`APE_011_DosMuestras`](https://github.com/js-valencia/Unidad_2_Aprendizajes_Practicos_Experimentales/blob/main/Portafolio_APE_Unidad2/APE_011_DosMuestras.ipynb)
 
 Se implementó la **aproximación de la Binomial a la Normal** para
 escenarios de Big Data (N=10,000), documentando el
@@ -132,7 +132,7 @@ discreta O(N) en entornos de Big Data.
 ---
 
 ### 🏆 Evaluación Sumativa — Unidad 2
-📂 [`Evaluacion_Sumativa/`](Evaluacion_Sumativa/)
+📂 [`Evaluacion_Sumativa`](Evaluacion_Sumativa/)
 
 Hito integrador de la Unidad 2 con dos componentes principales:
 
@@ -155,7 +155,7 @@ mensuales (43.9%) entre regímenes.
 ---
 
 ## 📝 Bitácora de Autoevaluación
-📂 [`bitacora/bitacora_autoevaluacion.md`](bitacora/bitacora_autoevaluacion.md)
+📂 [`bitacora/bitacora_autoevaluacion.md`](https://github.com/js-valencia/Unidad_2_Aprendizajes_Practicos_Experimentales/blob/main/Bitacora/bitacora_autoevaluacion.md)
 
 ---
 
